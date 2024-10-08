@@ -25,8 +25,7 @@ public class Solution {
             return true;
         else if (l == null || r == null)
             return false;
-
-        if (l.left?.val != r.right?.val || l.right?.val != r.left?.val || l.val != r.val)
+        else if (l.val != r.val)
             return false;
         
         bool left = IsSymmetric(l.left, r.right);
